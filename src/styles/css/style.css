@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700");
+* {
+  box-sizing: border-box;
+  line-height: 100%; }
+
+*:focus,
+*:active {
+  outline: none; }
+
+*::-moz-focus-inner {
+  border: 0; }
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #CCC;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  line-height: normal;
+  padding: 0 13px;
+  transition: .3s; }
+
+input[type=text]:focus,
+input[type=password]:focus,
+select:focus,
+textarea:focus {
+  border-color: teal; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: "";
+  padding: 0; }
+
+textarea {
+  resize: none;
+  padding: 10px 13px;
+  height: 100px; }
+
+button,
+.button {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 15px;
+  border: 0;
+  background: teal;
+  transition: .3s background; }
+  button.canceloption,
+  .button.canceloption {
+    background: crimson; }
+
+button:disabled,
+button:hover:disabled,
+.button:disabled,
+.button:hover:disabled {
+  background: #666;
+  cursor: default; }
+
+button:hover,
+.button:hover {
+  background: #00b3b3; }
+  button:hover.canceloption,
+  .button:hover.canceloption {
+    background: #ed365b; }
+
+ul, dl, li, dd, dt, p {
+  margin: 0;
+  padding: 0; }
+
+li, dd {
+  display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #232642;
+  font-family: "Montserrat", sans-serif;
+  color: #000; }
+
+.container {
+  max-width: 100%;
+  width: 1170px;
+  margin: auto;
+  padding: 0 15px; }
+
+#dashboard #topbar {
+  height: 70px;
+  line-height: 70px;
+  position: relative; }
+  #dashboard #topbar #logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 40px;
+    width: 100px;
+    fill: #FFF; }
+  #dashboard #topbar #rockhand {
+    position: absolute;
+    right: 40px;
+    top: calc(50% - 20px);
+    width: 20px;
+    fill: #FFF; }
+
+#dashboard #bottombar {
+  height: 100px;
+  line-height: 100px; }
+  #dashboard #bottombar #logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 40px;
+    width: 100px;
+    fill: #FFF; }
+
+#dashboard .content {
+  padding: 40px;
+  background: #ebebeb; }
+  #dashboard .content h2 {
+    color: #666;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 0 20px; }
+  #dashboard .content #chart {
+    padding: 30px;
+    background: #FFF;
+    box-shadow: 0 15px 30px rgba(51, 58, 69, 0.08);
+    border-radius: 7px;
+    overflow: auto; }
+    #dashboard .content #chart .chart_holder {
+      min-width: 800px;
+      min-height: 400px; }
+    #dashboard .content #chart * {
+      font-family: "Montserrat" !important; }
+  #dashboard .content #widgets {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    margin-bottom: 10px; }
+    #dashboard .content #widgets .widget {
+      background: #FFF;
+      box-shadow: 0 15px 30px rgba(51, 58, 69, 0.08);
+      border-radius: 7px;
+      overflow: hidden;
+      padding: 20px 20px 5px; }
+      #dashboard .content #widgets .widget .icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        fill: #999; }
+      #dashboard .content #widgets .widget .title {
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(100% - 20px);
+        padding-left: 10px;
+        font-size: 16px;
+        color: #666; }
+      #dashboard .content #widgets .widget .value {
+        text-align: center;
+        font-size: 40px;
+        color: #666;
+        margin-top: 50px; }
+      #dashboard .content #widgets .widget .percentage_holder {
+        margin-top: 15px;
+        text-align: center; }
+        #dashboard .content #widgets .widget .percentage_holder .percentage {
+          display: inline-block;
+          padding: 5px 15px;
+          border-radius: 15px;
+          color: #FFF;
+          font-size: 12px;
+          font-weight: 600; }
+          #dashboard .content #widgets .widget .percentage_holder .percentage.positive {
+            background: #35ba9b; }
+          #dashboard .content #widgets .widget .percentage_holder .percentage.negative {
+            background: #ec3942; }
+          #dashboard .content #widgets .widget .percentage_holder .percentage:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-top: -7px;
+            border: solid transparent;
+            border-width: 7px 4px;
+            border-bottom-color: #FFF; }
+      #dashboard .content #widgets .widget .question_holder {
+        text-align: right;
+        margin-right: -10px; }
+        #dashboard .content #widgets .widget .question_holder .question {
+          display: inline-block;
+          margin-top: 25px;
+          width: 16px;
+          fill: #CCC; }
+  #dashboard .content #songstable {
+    padding-top: 40px; }
+    #dashboard .content #songstable .table_holder {
+      overflow: auto; }
+    #dashboard .content #songstable table {
+      width: 100%;
+      min-width: 800px;
+      background: #FFF;
+      box-shadow: 0 15px 30px rgba(51, 58, 69, 0.08);
+      border-radius: 7px; }
+      #dashboard .content #songstable table tr:not(:last-of-type) td {
+        border-bottom: 1px solid #DDD; }
+      #dashboard .content #songstable table th, #dashboard .content #songstable table td {
+        font-size: 12px;
+        text-align: right;
+        color: #666; }
+        #dashboard .content #songstable table th:nth-child(1), #dashboard .content #songstable table th:nth-child(2), #dashboard .content #songstable table td:nth-child(1), #dashboard .content #songstable table td:nth-child(2) {
+          text-align: left; }
+        #dashboard .content #songstable table th:first-child, #dashboard .content #songstable table td:first-child {
+          padding-left: 40px; }
+        #dashboard .content #songstable table th:last-child, #dashboard .content #songstable table td:last-child {
+          padding-right: 40px; }
+      #dashboard .content #songstable table th {
+        padding: 40px 0 25px;
+        font-weight: 600; }
+      #dashboard .content #songstable table td {
+        padding: 15px 0; }
+    #dashboard .content #songstable ul {
+      padding: 15px 0 0;
+      text-align: center; }
+      #dashboard .content #songstable ul li:not(.first):not(.last) {
+        display: inline-block;
+        vertical-align: middle;
+        width: 26px;
+        height: 26px;
+        margin: 5px;
+        border-radius: 100%;
+        cursor: pointer;
+        text-align: center;
+        line-height: 26px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #666;
+        transition: .3s; }
+        #dashboard .content #songstable ul li:not(.first):not(.last).selected {
+          background: #33acd7;
+          color: #FFF;
+          cursor: default; }
+      #dashboard .content #songstable ul li.first, #dashboard .content #songstable ul li.last {
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        margin: 5px;
+        border-radius: 3px;
+        background: #DDD;
+        cursor: pointer;
+        text-align: center;
+        line-height: 18px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #666; }
+
+@media (max-width: 700px) {
+  #dashboard #topbar #logo {
+    margin: 0 20px; }
+  #dashboard #topbar #rockhand {
+    right: 20px; }
+  #dashboard #bottombar #logo {
+    margin: 0 20px; }
+  #dashboard .content {
+    padding: 20px; }
+    #dashboard .content #widgets {
+      display: block;
+      margin: 0; }
+      #dashboard .content #widgets .widget {
+        margin-bottom: 10px; }
+    #dashboard .content #chart {
+      padding: 15px; }
+    #dashboard .content #songstable .table_holder table th {
+      padding-top: 20px; }
+    #dashboard .content #songstable .table_holder table td:first-child, #dashboard .content #songstable .table_holder table th:first-child {
+      padding-left: 20px; }
+    #dashboard .content #songstable .table_holder table td:last-child, #dashboard .content #songstable .table_holder table th:last-child {
+      padding-right: 20px; } }
